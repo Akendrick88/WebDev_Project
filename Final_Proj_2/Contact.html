@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+			<link rel="stylesheet" href="furbabyspa.css">
+		<title> Contact Us </title>
+		<script>
+        function validateForm() {
+          if (document.forms[0].myName.value =="") {
+            alert("Name field cannot be empty.");
+            return false;
+          } // end if
+          if (document.forms[0].myEmail.value =="") {
+            alert("Please enter an email address. If this is not applicable, please provide a phone number.");
+            return false;
+          } // end if
+          alert ("All inputs are valid. Your appointment will be confirmed shortly.");
+          return true;
+        } // end function
+        </script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1> Contact Us </h1>
+			</header>
+		<nav>
+			<ul>
+				<a href="index.html"> Home </a>
+				<a href="Gallery.html"> Gallery </a>
+				<a href="Service.html"> Services </a>
+				<a href="Contact.html"> Contact </a>
+			</ul>
+		</nav>
+	<main>
+		<h2> Contact Us! </h2>
+			<p> To set an appointment please fill out and submit this form. 
+			Our staff will contact you via phone or email to confim your appointment.
+			You can also call us to set your appointment: (512)505-5505 </p><br><br>
+		<form method="post" onsubmit="return validateForm();">
+			<label for="myName"> Name: </label>
+			<input type="text" name="myName" id="myName"> <br><br>
+			<label for="myPhone"> Phone: </label>
+			<input type="tel" name="myPhone" id="myPhone" placeholder="123-456-7890" pattern="[1-9]{3}-[1-9]{3}-[0-9]{4}"> <br><br>
+			<label for="myEmail"> E-mail: </label>
+			<input type="text" name="myEmail" id="myEmail"> <br><br>
+			<label for="myDate"> Choose a Date: </label>
+			<input type="date" name="myDate" id="myDate"> <br><br>
+			<label for="myComments"> Comments: </label> <br>
+			<textarea name="myComments" id="myComments" rows="4" cols="40"></textarea> <br>
+			<input type="submit" value="Send information" id="submit"> <br><br>
+		</form>
+	</main>
+		<footer>
+			Copyright &copy; 2021 The Fur Baby Spa <br> 
+			<a href="http://TheFurBabySpa.com"> The Fur Baby Spa </a>
+		</footer>
+			</div>
+	</body>
+</html>
